@@ -1,4 +1,4 @@
-package com.ocyanus.minesweeper;
+package com.itielmaimon.minesweeper;
 
 import android.os.Bundle;
 import android.preference.ListPreference;

@@ -1,4 +1,4 @@
-package com.ocyanus.minesweeper;
+package com.itielmaimon.minesweeper;
 
 import org.junit.Test;
 

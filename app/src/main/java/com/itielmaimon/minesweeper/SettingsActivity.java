@@ -1,4 +1,4 @@
-package com.ocyanus.minesweeper;
+package com.itielmaimon.minesweeper;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

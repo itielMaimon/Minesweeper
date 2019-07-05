@@ -1,4 +1,4 @@
-package com.ocyanus.minesweeper;
+package com.itielmaimon.minesweeper;
 
 import android.content.Context;
 import androidx.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.ocyanus.minesweeper", appContext.getPackageName());
+        assertEquals("com.itielmaimon.minesweeper", appContext.getPackageName());
     }
 }
