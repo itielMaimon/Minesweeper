@@ -3,16 +3,16 @@
 
 The classic Microsoft Minesweeper game from the 90s.
 
-![](s1.jpg) ![](s2.jpg) ![](s3.jpg)
+![](Header.jpg)
 
 ## Features
 - <b>3 levels of difficulty</b>
-   > Choose between 3 levels of difficulty, Easy (9x9), Medium (16x16), Hard (30x16).
+   > Choose between 3 levels of difficulty, Easy (9x9), Medium (16x16) and Hard (30x16).
 - <b>3 different themes</b>
-   > Choose between 3 different themes, Classic, Modern, Dark.
+   > Choose between 3 different themes, Classic, Modern and Dark.
 - <b>Dark Mode</b>
-   > Get into Dark Mode for the long nights.
-- <b>Multi-languages</b>
+   > Get into the Dark Mode for the long nights.
+- <b>Multi-language support</b>
    > Choose between 2 languages, Hebrew and English.
 
 
