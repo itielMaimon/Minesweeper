@@ -3,7 +3,7 @@
 
 The classic Microsoft Minesweeper game from the 90s.
 
-![](Header.jpg)
+![](Header.jpeg)
 
 ## Features
 - <b>3 levels of difficulty</b>
@@ -17,9 +17,9 @@ The classic Microsoft Minesweeper game from the 90s.
 
 
 ## Installation
-Clone this repository and import into **Android Studio**
+Clone this repository and import it into **Android Studio**
 ```bash
-git https://github.com/itielMaimon/Minesweeper
+$ git clone https://github.com/itielMaimon/Minesweeper
 ```
 
 ## Maintainers
