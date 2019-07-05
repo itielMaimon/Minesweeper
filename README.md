@@ -1,7 +1,7 @@
 # Minesweeper
-### Minesweeper for Android
+## Minesweeper for Android
 
-The classic Microsoft Minesweeper game from the 90s.
+### The classic Microsoft Minesweeper game from the 90s.
 
 ![](Header.jpeg)
 
@@ -15,7 +15,6 @@ The classic Microsoft Minesweeper game from the 90s.
 - <b>Multi-language support</b>
    > Choose between 2 languages, Hebrew and English.
 
-
 ## Installation
 Clone this repository and import it into **Android Studio**
 ```bash
@@ -26,11 +25,9 @@ $ git clone https://github.com/itielMaimon/Minesweeper
 This project is mantained by:
 * [Itiel Maimon](http://github.com/itielMaimon)
 
-
 ## Contributing
 1. Fork it
 2. Create your feature branch (git checkout -b my-new-feature).
 3. Commit your changes (git commit -m 'Add some feature').
-4. Run the linter (ruby lint.rb').
-5. Push your branch (git push origin my-new-feature).
-6. Create a new Pull Request.
+4. Push your branch (git push origin my-new-feature).
+5. Create a new Pull Request.
