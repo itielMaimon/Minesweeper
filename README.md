@@ -16,7 +16,7 @@ The classic Microsoft Minesweeper game from the 90s.
    > Choose between 2 languages, Hebrew and English.
 
 ## Installation
-Clone this repository and import it into **Android Studio**
+Clone this repository and import it into **Android Studio**.
 ```bash
 $ git clone https://github.com/itielMaimon/Minesweeper
 ```
