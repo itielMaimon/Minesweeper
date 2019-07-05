@@ -1,7 +1,7 @@
 # Minesweeper
-## Minesweeper for Android
+### Minesweeper for Android
 
-### The classic Microsoft Minesweeper game from the 90s.
+The classic Microsoft Minesweeper game from the 90s.
 
 ![](Header.jpeg)
 
@@ -26,7 +26,7 @@ This project is mantained by:
 * [Itiel Maimon](http://github.com/itielMaimon)
 
 ## Contributing
-1. Fork it
+1. Fork it.
 2. Create your feature branch (git checkout -b my-new-feature).
 3. Commit your changes (git commit -m 'Add some feature').
 4. Push your branch (git push origin my-new-feature).
