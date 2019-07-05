@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minesweeper</string>
+    <string name="classic">קלאסי</string>
+    <string name="dark">חשוך</string>
+    <string name="easy">קל (9X9)</string>
+    <string name="medium">בינוני (16X16)</string>
+    <string name="hard">קשה (30X16)</string>
+    <string name="mines">מוקשים:</string>
+    <string name="play">שחק</string>
+    <string name="pref_title_language">שפה</string>
+    <string name="pref_title_night_mode">מצב לילה</string>
+    <string name="pref_title_vibration">רטט</string>
+    <string name="settings">הגדרות</string>
+    <string name="time">זמן:</string>
+    <string name="pref_header_game">משחק</string>
+    <string name="pref_header_display">תצוגה</string>
+    <string name="pref_header_ui">ממשק משתמש</string>
+    <string name="pref_description_vibration">רטט מופעל</string>
+    <string name="pref_description_night_mode">מצב לילה כבוי</string>
+    <string name="modern">מודרני</string>
+    <string name="off">כבוי</string>
+    <string name="on">דלוק</string>
+    <string name="end_game_warning">האם אתה בטוח שברצונך לצאת מהמשחק?</string>
+    <string name="seconds">שניות.</string>
+    <string name="you_lost">הפסדת!</string>
+    <string name="you_tried_for">ניסית במשך</string>
+    <string name="you_won">ניצחת!</string>
+    <string name="you_won_in">ניצחת בתוך</string>
+</resources>

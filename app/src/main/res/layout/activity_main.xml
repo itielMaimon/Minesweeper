@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ocyanus.minesweeper.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/main_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true">
+
+        <LinearLayout
+            android:id="@+id/difficulty_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/difficulty_prev_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/prev_sign"/>
+
+            <TextView
+                android:id="@+id/difficulty_textView"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/easy" />
+
+            <Button
+                android:id="@+id/difficulty_next_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/next_sign"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/play_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/difficulty_layout"
+            android:layout_centerHorizontal="true"
+            android:text="@string/play"/>
+
+        <Button
+            android:id="@+id/settings_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/play_button"
+            android:layout_centerHorizontal="true"
+            android:text="@string/settings" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/settings_button"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/theme_prev_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/prev_sign"/>
+
+            <TextView
+                android:id="@+id/theme_textView"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/classic" />
+
+            <Button
+                android:id="@+id/theme_next_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:text="@string/next_sign"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/play_board"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/timer_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginEnd="@dimen/textView_margin"
+            android:layout_marginRight="@dimen/textView_margin"
+            android:layout_marginBottom="@dimen/textView_margin"
+            android:text="@string/time"
+            android:textSize="@dimen/textView_text_size" />
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textView_margin"
+            android:layout_toEndOf="@+id/timer_textView"
+            android:layout_toRightOf="@+id/timer_textView"
+            android:text="@string/zero"
+            android:textSize="@dimen/textView_text_size" />
+
+        <Button
+            android:id="@+id/flag_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/textView_margin"/>
+
+        <TextView
+            android:id="@+id/minesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/textView_margin"
+            android:text="@string/zero"
+            android:textSize="@dimen/textView_text_size" />
+
+        <TextView
+            android:id="@+id/mines_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/textView_margin"
+            android:layout_marginRight="@dimen/textView_margin"
+            android:layout_marginBottom="@dimen/textView_margin"
+            android:layout_toStartOf="@id/minesCount"
+            android:layout_toLeftOf="@id/minesCount"
+            android:text="@string/mines"
+            android:textSize="@dimen/textView_text_size" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/flag_button"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="2dp">
+
+            <TableLayout
+                android:id="@+id/mineField"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
