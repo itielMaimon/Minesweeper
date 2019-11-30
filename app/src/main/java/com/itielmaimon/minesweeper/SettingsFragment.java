@@ -34,7 +34,7 @@ public class SettingsFragment extends PreferenceFragment {
         sBindPreferenceSummaryToValueListener.onPreferenceChange(preference,
                 PreferenceManager
                         .getDefaultSharedPreferences(preference.getContext())
-                        .getString(preference.getKey(), ""));
+                        .getString(preference.getKey(), "en"));
     }
 
     private static void bindBooleanPreferenceSummaryToValue(Preference preference) {

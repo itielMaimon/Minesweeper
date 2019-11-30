@@ -13,78 +13,103 @@
     <RelativeLayout
         android:id="@+id/main_view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerVertical="true">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:id="@+id/difficulty_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/difficulty_prev_button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="@string/prev_sign"/>
-
-            <TextView
-                android:id="@+id/difficulty_textView"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/easy" />
-
-            <Button
-                android:id="@+id/difficulty_next_button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="@string/next_sign"/>
-
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/play_button"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/difficulty_layout"
-            android:layout_centerHorizontal="true"
-            android:text="@string/play"/>
-
-        <Button
+        <ImageButton
             android:id="@+id/settings_button"
-            android:layout_width="200dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:background="?attr/actionBarItemBackground"
+            android:contentDescription="@string/settings"
+            android:src="@drawable/ic_settings" />
+
+        <ImageButton
+            android:id="@+id/remove_ads_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="?attr/actionBarItemBackground"
+            android:contentDescription="@string/remove_ads"
+            android:src="@drawable/ic_remove_ads" />
+
+
+        <TextView
+            android:id="@+id/app_title"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/play_button"
             android:layout_centerHorizontal="true"
-            android:text="@string/settings" />
+            android:paddingTop="150dp"
+            android:paddingBottom="150dp"
+            android:text="@string/app_name"
+            android:textSize="34sp" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/settings_button"
+            android:layout_below="@id/app_title"
             android:layout_centerHorizontal="true"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
-            <Button
-                android:id="@+id/theme_prev_button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="@string/prev_sign"/>
-
-            <TextView
-                android:id="@+id/theme_textView"
-                android:layout_width="120dp"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/classic" />
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/difficulty_prev_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/prev_sign" />
+
+                <TextView
+                    android:id="@+id/difficulty_textView"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/easy" />
+
+                <Button
+                    android:id="@+id/difficulty_next_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/next_sign" />
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/theme_next_button"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:text="@string/next_sign"/>
+                android:id="@+id/play_button"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:text="@string/play" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/theme_prev_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/prev_sign" />
+
+                <TextView
+                    android:id="@+id/theme_textView"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/classic" />
+
+                <Button
+                    android:id="@+id/theme_next_button"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:text="@string/next_sign" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
@@ -123,7 +148,7 @@
             android:layout_width="30dp"
             android:layout_height="30dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="@dimen/textView_margin"/>
+            android:layout_marginBottom="@dimen/textView_margin" />
 
         <TextView
             android:id="@+id/minesCount"

@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -14,6 +15,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -59,7 +61,9 @@ public class MainActivity extends AppCompatActivity {
 
     RelativeLayout mainView;
     Button playButton;
-    Button settingsButton;
+    ImageButton settingsButton;
+    ImageButton removeAdsButton;
+    TextView appTitle;
     TextView themeTextView;
     TextView difficultyTextView;
     TextView txtMineCount;
@@ -92,8 +96,10 @@ public class MainActivity extends AppCompatActivity {
         isVibrationEnabled = preferences.getBoolean(getString(R.string.vibration_pref_key), true);
 
         mainView = findViewById(R.id.main_view);
-        playButton = findViewById(R.id.play_button);
         settingsButton = findViewById(R.id.settings_button);
+        removeAdsButton = findViewById(R.id.remove_ads_button);
+        playButton = findViewById(R.id.play_button);
+        appTitle = findViewById(R.id.app_title);
         difficultyTextView = findViewById(R.id.difficulty_textView);
         themeTextView = findViewById(R.id.theme_textView);
 
@@ -274,6 +280,9 @@ public class MainActivity extends AppCompatActivity {
     private void setGameTheme(int i) {
         switch (i) {
             case 0:
+                settingsButton.setImageResource(R.drawable.ic_settings);
+                removeAdsButton.setImageResource(R.drawable.ic_remove_ads);
+                appTitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/VT323-Regular.ttf"));
                 themeTextView.setText(getString(R.string.classic));
                 findViewById(R.id.activity_main).setBackgroundColor(ContextCompat.getColor(this, R.color.classicBackgroundColor));
                 themeTextColor = ContextCompat.getColor(this, R.color.black);
@@ -285,6 +294,9 @@ public class MainActivity extends AppCompatActivity {
                 wrongFlaggedBlock = R.drawable.classic_wrong_flag;
                 break;
             case 1:
+                settingsButton.setImageResource(R.drawable.ic_settings);
+                removeAdsButton.setImageResource(R.drawable.ic_remove_ads);
+                appTitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/MontserratAlternates-Medium.ttf"));
                 themeTextView.setText(getString(R.string.modern));
                 findViewById(R.id.activity_main).setBackgroundColor(ContextCompat.getColor(this, R.color.modernBackgroundColor));
                 themeTextColor = ContextCompat.getColor(this, R.color.black);
@@ -296,17 +308,21 @@ public class MainActivity extends AppCompatActivity {
                 wrongFlaggedBlock = R.drawable.ic_red_flag;
                 break;
             case 2:
-                themeTextView.setText(getString(R.string.dark));
+                settingsButton.setImageResource(R.drawable.ic_settings_spooky);
+                removeAdsButton.setImageResource(R.drawable.ic_remove_ads_spooky);
+                appTitle.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/CinzelDecorative-Bold.ttf"));
+                themeTextView.setText(getString(R.string.spooky));
                 findViewById(R.id.activity_main).setBackgroundColor(ContextCompat.getColor(this, R.color.black));
                 themeTextColor = ContextCompat.getColor(this, R.color.white);
-                coveredBlock = R.drawable.dark_covered;
-                openedBlock = R.drawable.dark_opened;
+                coveredBlock = R.drawable.spooky_covered;
+                openedBlock = R.drawable.spooky_opened;
                 minedBlock = R.drawable.ic_white_mine;
                 redMinedBlock = R.drawable.ic_red_mine;
                 flaggedBlock = R.drawable.ic_white_flag;
                 wrongFlaggedBlock = R.drawable.ic_red_flag;
                 break;
         }
+        appTitle.setTextColor(themeTextColor);
         difficultyTextView.setTextColor(themeTextColor);
         themeTextView.setTextColor(themeTextColor);
         txtMineCount.setTextColor(themeTextColor);
