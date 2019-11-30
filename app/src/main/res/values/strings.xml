@@ -47,4 +47,8 @@
     <string name="vibration_pref_key" translatable="false">vibration_pref</string>
     <string name="language_pref_key" translatable="false">language_pref</string>
     <string name="language_code" translatable="false">en</string>
+    <string name="adMob_app_id" translatable="false">ca-app-pub-1362373783891124~3588781059</string>
+    <string name="adMob_main_banner_ad_unit_id" translatable="false">ca-app-pub-1362373783891124/6079213026</string>
+    <string name="sociallix_app_play_store_url" translatable="false">https://play.google.com/store/apps/details?id=com.sociallix.android</string>
+    <string name="banner_ad" translatable="false">Banner ad</string>
 </resources>

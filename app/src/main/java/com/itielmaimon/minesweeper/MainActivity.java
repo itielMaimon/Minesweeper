@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Vibrator;
@@ -16,10 +17,18 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.util.Locale;
 import java.util.Random;
@@ -59,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
     private boolean isPlayBoardVisible;
 
+    private AdView mAdView;
     RelativeLayout mainView;
     Button playButton;
     ImageButton settingsButton;
@@ -90,6 +100,14 @@ public class MainActivity extends AppCompatActivity {
                 getBaseContext().getResources().getDisplayMetrics());
 
         setContentView(R.layout.activity_main);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView);
+        loadBannerAd();
 
         difficultyPref = preferences.getInt(getString(R.string.difficulty_pref_key), 0);
         themePref = preferences.getInt(getString(R.string.theme_pref_key), 0);
@@ -217,6 +235,38 @@ public class MainActivity extends AppCompatActivity {
                         setGameTheme(1);
                         break;
                 }
+            }
+        });
+    }
+
+    private void loadBannerAd() {
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                super.onAdLoaded();
+                findViewById(R.id.failedAdView).setVisibility(View.GONE);
+            }
+
+            @Override
+            public void onAdFailedToLoad(int i) {
+                super.onAdFailedToLoad(i);
+                ((ImageView) findViewById(R.id.failedAdView)).setImageDrawable(ContextCompat.getDrawable(MainActivity.this, R.drawable.failed_banner));
+                findViewById(R.id.failedAdView).setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.sociallix_app_play_store_url))));
+                    }
+                });
+                findViewById(R.id.failedAdView).setVisibility(View.VISIBLE);
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        loadBannerAd();
+                    }
+                }, 10000);
             }
         });
     }
